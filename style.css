@@ -177,10 +177,8 @@ footer p{
 }
 
 footer .links{
-    /*border:1px solid green;*/
     /* background-color: rgb(136, 134, 134); */
     float: right;
-    
 }
 
 footer .links a{
@@ -204,7 +202,7 @@ footer .links a{
         font-size: 14px;
     }
     footer{
-        width:85vh;
+        width:73vh;
     }
 }
 
