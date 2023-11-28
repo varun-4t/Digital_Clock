@@ -1,0 +1,198 @@
+*{
+    margin: 0px;
+    padding:0px;
+    font-family: 'Nova Square', sans-serif;
+    background-color: black;
+    border-radius: 10px;
+}
+
+html{
+    font-size: 10px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    /* border:2px solid red; */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+h1{
+    font-size:2.3rem;
+    color:rgb(252, 87, 252);
+    text-shadow:  rgb(255, 0, 212) 0px 0px 10px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item{
+    display: flex;
+    color:white;
+    font-size: 1.5rem;
+    margin:1.5rem;
+    list-style: none;
+    padding:2px 15px;
+    border: 1px solid white;
+}
+
+.nav-item:hover{
+    transition: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    border: 2px solid green;
+    font-size: 1.6rem;
+}
+
+main{
+   /* border:1px solid green; */
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+#clock , .view-time{
+    color:white;
+    font-size:1.7rem;
+}
+
+#timerContainer{
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#timerContainer .buttons{
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+#timerContainer h1{
+    color: white;
+    text-shadow: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.t_items{
+    color:white;
+    margin:1rem 0.5rem;
+    border:1px solid white;
+    padding:2px 7px;
+}
+
+.t_items:hover{
+    transition: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    border: 2px solid green;
+    font-size: 0.6rem;
+}
+
+#alarmcontainer{
+    /* border:1px solid white; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#alarmcontainer .content {
+    display: flex;
+    color: white;
+}
+
+#alarmcontainer .content select{
+    font-size: 1.4rem;
+    color:white;
+    margin: 0.6rem;
+    padding:2px 7px;
+}
+
+#alarmcontainer button{
+    font-size: 1.4rem;
+    color:white;
+    margin: 0.6rem;
+    padding:2px 9px;
+    border:1px solid white;
+}
+
+#alarmcontainer select:hover{
+    transition: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+    border: 2px solid green;
+}
+#alarmcontainer button:hover{
+    transition: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+    border: 2px solid green;
+}
+
+
+/* For Mobile */
+@media (min-width:375px){
+    html{
+        font-size: 12px;
+    }
+}
+
+@media (min-width:425px){
+    html{
+        font-size: 14px;
+    }
+}
+
+
+/* For Tablet */
+@media (min-width:768px){
+    html{
+        font-size: 17px;
+    }
+}
+
+
+/* For Laptop */
+@media (min-width:1024px){
+    html{
+        font-size: 20px;
+    }
+}
+
+@media (min-width:1440px){
+    html{
+        font-size: 21.5px;
+    }
+}
+
+@media (min-width:2560px){
+    html{
+        font-size: 32px;
+    }
+}

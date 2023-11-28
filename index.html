@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Baloo+Bhai+2&family=Nova+Square&family=Playfair+Display&family=Poppins:wght@100&family=Signika+Negative:wght@300&family=Tilt+Neon&family=Ubuntu:wght@300&display=swap');
+    </style>
+    <title>Digital Clock</title>
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <h1 class="title">
+                Digital Clock
+            </h1>
+        </header>
+        <nav class="navbar">
+            <ul class="nav-content">
+                <button class="nav-item">Clock</button>
+                <button class="nav-item">Timer</button>
+                <button class="nav-item">Alarm</button>
+            </ul>
+        </nav>
+        <main>
+            <section id="clock" class="c"></section>
+
+            <div id="timerContainer">
+                <div class="buttons">
+                    <button class="t_items" id="timer">Start</button>
+                    <button class="t_items" id="Stop">Stop</button>
+                    <button class="t_items" id="Resume">Resume</button>
+                    <button class="t_items" id="Reset">Reset</button>
+                </div>
+                <h1 class="buttons">
+                    <span id="hrs">00</span>
+                    <span>:</span>
+                    <span id="min">00</span>
+                    <span>:</span>
+                    <span id="sec">00</span>
+                </h1>
+            </div>
+
+            <section id="alarmcontainer">
+                <div class="view-time"></div>
+                <div class="content">
+                  
+                  <select  class='btn' id="hrs">
+                    <option selected hidden>hrs</option>
+                  </select>
+          
+                  <select  class='btn' id="min">
+                    <option selected hidden>min</option>
+                  </select>
+          
+                  <select class='btn' >
+                    <option selected hidden>AM / PM</option>
+                  </select>
+          
+                </div>
+                  <button value="submit" class="alarm-btn btn">Set Alarm</button>
+         </section>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
