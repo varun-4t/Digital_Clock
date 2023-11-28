@@ -205,6 +205,14 @@ footer .links a{
         width:73vh;
     }
 }
+@media (min-width:425px) and (min-height:926px){
+    html{
+        font-size: 14px;
+    }
+    footer{
+        width:65vh;
+    }
+}
 
 
 /* For Tablet */
