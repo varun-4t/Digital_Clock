@@ -16,6 +16,7 @@ html{
 
 .main{
     display: flex;
+    /* border:1px solid red; */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -155,17 +156,55 @@ main{
     border: 2px solid green;
 }
 
+footer{
+    margin:2px 5px;
+    display: flex;
+    flex-direction: row;
+    width:64vh;
+    border-radius: 0px;
+    /* background-color: rgb(136, 134, 134); */
+    /* border:1px solid red; */
+    color:white;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top:380px;
+}
+
+footer p{
+    border:0px;
+    /* background-color: rgb(136, 134, 134); */
+}
+
+footer .links{
+    border:1px solid green;
+    /* background-color: rgb(136, 134, 134); */
+    float: right;
+    
+}
+
+footer .links a{
+    color:white;
+    margin:0px 3px;
+}
 
 /* For Mobile */
 @media (min-width:375px){
     html{
         font-size: 12px;
     }
+    footer{
+        top:350px;
+        width:75vh;
+    }
 }
 
 @media (min-width:425px){
     html{
         font-size: 14px;
+    }
+    footer{
+        width:85vh;
     }
 }
 
@@ -175,6 +214,10 @@ main{
     html{
         font-size: 17px;
     }
+    footer{
+        top:285px;
+        width:155vh;
+    }
 }
 
 
@@ -183,16 +226,27 @@ main{
     html{
         font-size: 20px;
     }
+    footer{
+        width:207vh;
+    }
 }
 
 @media (min-width:1440px){
     html{
         font-size: 21.5px;
     }
+    footer{
+        top:400px;
+        width:210vh;
+    }
 }
 
 @media (min-width:2560px){
     html{
         font-size: 32px;
+    }
+    footer{
+        top:550px;
+        width:260vh;
     }
 }
