@@ -40,8 +40,8 @@ function clock() {
 let t = document.getElementsByClassName('nav-item')[1];
 let d2 = document.getElementById("timerContainer");
 
-document.getElementById("clock").style.display="none"
-document.getElementById("alarmcontainer").style.display="none"
+//document.getElementById("clock").style.display="none"
+//document.getElementById("alarmcontainer").style.display="none"
     
 function dis() {
     if (d2.style.display === "none") {
