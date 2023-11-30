@@ -21,6 +21,7 @@ html{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin:.5rem;
 }
 
 header{
@@ -149,6 +150,7 @@ main{
     transition-timing-function: ease-in-out;
     border: 2px solid green;
 }
+
 #alarmcontainer button:hover{
     transition: all;
     transition-duration: 0.1s;
@@ -168,7 +170,7 @@ footer{
     justify-content: space-between;
     align-items: center;
     position: relative;
-    top:500px;
+    top:45rem;
 }
 
 footer p{
@@ -177,8 +179,10 @@ footer p{
 }
 
 footer .links{
+    /* border:1px solid green; */
     /* background-color: rgb(136, 134, 134); */
     float: right;
+    
 }
 
 footer .links a{
@@ -192,8 +196,8 @@ footer .links a{
         font-size: 12px;
     }
     footer{
-        top:620px;
-        width:45vh;
+        top:37rem;
+        width:60vh;
     }
 }
 
@@ -202,15 +206,8 @@ footer .links a{
         font-size: 14px;
     }
     footer{
-        width:73vh;
-    }
-}
-@media (min-width:425px) and (min-height:926px){
-    html{
-        font-size: 14px;
-    }
-    footer{
-        width:45vh;
+        top:30rem;
+        width:69vh;
     }
 }
 
@@ -221,8 +218,8 @@ footer .links a{
         font-size: 17px;
     }
     footer{
-        top:285px;
-        width:155vh;
+        top:23rem;
+        width:130vh;
     }
 }
 
@@ -233,7 +230,8 @@ footer .links a{
         font-size: 20px;
     }
     footer{
-        width:207vh;
+        top:18rem;
+        width:175vh;
     }
 }
 
@@ -242,17 +240,17 @@ footer .links a{
         font-size: 21.5px;
     }
     footer{
-        top:400px;
-        width:210vh;
+        top:27rem;
+        width:173vh;
     }
 }
 
 @media (min-width:2560px){
     html{
-        font-size: 32px;
+        font-size: 45px;
     }
     footer{
-        top:550px;
-        width:260vh;
+        top:21rem;
+        width:173vh;
     }
 }
