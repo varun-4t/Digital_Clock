@@ -1,9 +1,15 @@
 *{
     margin: 0px;
     padding:0px;
+    box-sizing: border-box;
     font-family: 'Nova Square', sans-serif;
     background-color: black;
     border-radius: 10px;
+    /* border: 1px solid white; */
+}
+
+body{
+    height: 100%;
 }
 
 html{
@@ -38,24 +44,28 @@ h1{
 }
 
 .navbar{
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+    width: 100%;
 }
 
 .nav-content{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    height: 5rem;
+    width: 100%;
 }
 
 .nav-item{
-    display: flex;
+    /* display: flex; */
+    position: static;
     color:white;
     font-size: 1.5rem;
-    margin:1.5rem;
+    /* margin:1.5rem 2rem; */
     list-style: none;
     padding:2px 15px;
-    border: 1px solid white;
+    border: 2px solid white;
 }
 
 .nav-item:hover{
@@ -63,7 +73,7 @@ h1{
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
     border: 2px solid green;
-    font-size: 1.6rem;
+    transform: scale(1.1);
 }
 
 main{
@@ -158,31 +168,28 @@ main{
     border: 2px solid green;
 }
 
+#setalarm{
+    color:rgb(196, 196, 196);
+}
+
 footer{
-    margin:2px 5px;
+    margin:0px 5px;
     display: flex;
     flex-direction: row;
-    width:50vh;
-    border-radius: 0px;
+    width: 100%;
     /* background-color: rgb(136, 134, 134); */
     /* border:1px solid red; */
+    padding:10rem 0rem;
     color:white;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    position: relative;
-    top:45rem;
+    position: absolute;
+    top:55rem;
 }
 
 footer p{
     border:0px;
     /* background-color: rgb(136, 134, 134); */
-}
-
-footer .links{
-    /* border:1px solid green; */
-    /* background-color: rgb(136, 134, 134); */
-    float: right;
-    
 }
 
 footer .links a{
@@ -193,21 +200,19 @@ footer .links a{
 /* For Mobile */
 @media (min-width:375px){
     html{
-        font-size: 12px;
-    }
-    footer{
-        top:37rem;
-        width:60vh;
-    }
-}
-
-@media (min-width:425px){
-    html{
         font-size: 14px;
     }
     footer{
-        top:30rem;
-        width:69vh;
+        top:40rem;
+    }
+}
+
+@media (min-width:400px){
+    html{
+        font-size: 15px;
+    }
+    footer{
+        top:42rem;
     }
 }
 
@@ -215,11 +220,19 @@ footer .links a{
 /* For Tablet */
 @media (min-width:768px){
     html{
-        font-size: 17px;
+        font-size: 26px;
     }
     footer{
         top:23rem;
-        width:130vh;
+    }
+}
+
+@media (min-width:810px){
+    html{
+        font-size: 30px;
+    }
+    footer{
+        top: 22rem;
     }
 }
 
@@ -231,7 +244,6 @@ footer .links a{
     }
     footer{
         top:18rem;
-        width:175vh;
     }
 }
 
@@ -241,7 +253,15 @@ footer .links a{
     }
     footer{
         top:27rem;
-        width:173vh;
+    }
+}
+
+@media (min-width:1220px){
+    html{
+        font-size: 28px;
+    }
+    footer{
+        top:15rem;
     }
 }
 
@@ -251,6 +271,5 @@ footer .links a{
     }
     footer{
         top:21rem;
-        width:173vh;
     }
 }
