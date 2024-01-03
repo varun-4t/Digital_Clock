@@ -8,9 +8,11 @@ let clockElement = document.getElementById("clock");
 
 function clock() {
     if (clockElement.style.display === 'none') {
-        clockElement.style.display = 'flex'
+        clockElement.style.display = 'flex';
+        document.getElementById("alarmcontainer").style.display="none";
+        document.getElementById("timerContainer").style.display="none";
     } else {
-        clockElement.style.display = 'none'
+        clockElement.style.display = 'none';
     }
 
     setInterval(() => {
@@ -22,11 +24,12 @@ function clock() {
         if (hrs > 12) {
             hrs = hrs - 12
             hrs = hrs < 10 ? "0" + hrs : hrs;
+            ampm = "PM";
         }
 
         min = min < 10 ? "0" + min : min;
 
-        content = `<span>${hrs}</span><span>:${min}</span><span>:${sec}</span>`
+        content = `<span>${hrs}</span><span>:${min}</span><span>:${sec}</span>  ${ampm}`
 
         clockElement.innerHTML = content;
         console.log(hrs + ":" + min + ":" + sec);
@@ -40,12 +43,14 @@ function clock() {
 let t = document.getElementsByClassName('nav-item')[1];
 let d2 = document.getElementById("timerContainer");
 
-//document.getElementById("clock").style.display="none"
-//document.getElementById("alarmcontainer").style.display="none"
+document.getElementById("clock").style.display="none"
+document.getElementById("alarmcontainer").style.display="none"
     
 function dis() {
     if (d2.style.display === "none") {
         d2.style.display = "flex";
+        document.getElementById("clock").style.display="none";
+        document.getElementById("alarmcontainer").style.display="none";
     } else {
         d2.style.display = "none";
     }
@@ -112,6 +117,7 @@ function reset() {
 
 
 //Alarm Section
+set = [];
 view=document.querySelector(".view-time");
 document.getElementsByClassName("nav-item")[2].addEventListener('click', function () {
 
@@ -124,14 +130,15 @@ document.getElementsByClassName("nav-item")[2].addEventListener('click', functio
         if (hrs > 12) {
             hrs = hrs - 12
             hrs = hrs < 10 ? "0" + hrs : hrs;
+            ampm = "PM";
         }
 
         min = min < 10 ? "0" + min : min;
 
-        content = `<span>${hrs}</span><span>:${min}</span><span>:${sec}</span>`
+        content = `<span>${hrs}</span><span>: ${min}</span><span>: ${sec}</span> ${ampm}`
 
         view.innerHTML = content;
-        console.log(hrs + ":" + min + ":" + sec);
+        // console.log(hrs + ":" + min + ":" + sec);
     }, 1000);
 
 
@@ -139,10 +146,16 @@ document.getElementsByClassName("nav-item")[2].addEventListener('click', functio
     document.getElementById("timerContainer").style.display="none"
     
     if(document.getElementById("alarmcontainer").style.display==="none"){
+
     document.getElementById("alarmcontainer").style.display='flex';
-        }else{
+    document.getElementById("clock").style.display="none";
+    document.getElementById("timerContainer").style.display="none";
+    
+}else{
+
     document.getElementById("alarmcontainer").style.display='none';
-    }
+
+}
 
 const selectMenu = document.querySelectorAll("select");
 const alarmBtn = document.querySelector(".alarm-btn");
@@ -169,13 +182,31 @@ for (let i = 2; i > 0; i--) {
 
 function alarm() {
   let setAlarm = `${selectMenu[0].value}:${selectMenu[1].value} ${selectMenu[2].value}`;
+  
+  timeObj = {
+    hrs : selectMenu[0].value,
+    mins: selectMenu[1].value,
+    meridiem: selectMenu[2].value
+  }
+  set.push(timeObj);
+  console.log(set);
 
+  const setAlarmList = document.getElementById("setalarm");
+  setAlarmList.innerHTML = "";
+
+for (let i = 0; i < set.length; i++) {
+    const listItem = document.createElement("li");
+    listItem.textContent = `Alarm set for ${set[i].hrs} : ${set[i].mins} ${set[i].meridiem}`;
+    setAlarmList.appendChild(listItem);
+}
+
+  
   if (selectMenu[0].value === 'Hrs' || selectMenu[1].value === 'Min' || selectMenu[2].value === 'AM/PM') {
     alert("Please enter valid details");
     return;
   }
 
-  console.log(setAlarm);
+//   console.log(setAlarm);
 
   const intervalId = setInterval(() => {
     const currentDate = new Date();
@@ -188,7 +219,7 @@ function alarm() {
     const formattedMinutes = currentMinutes < 10 ? "0" + currentMinutes : currentMinutes;
 
     const currentTime = `${formattedHours}:${formattedMinutes} ${ampm}`;
-    console.log(currentTime);
+    // console.log(currentTime);
 
     if (currentTime === setAlarm && isAlarmSet) {
       selectMenu.forEach(select => select.classList.add("ring"));
@@ -212,6 +243,3 @@ function alarm() {
 
 alarmBtn.addEventListener('click', alarm);
   });
-
-
-  
